@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="images/main-icon.png">
+        
+        <title>Welcome - Apply Myself</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <!-- Custom styles for this template -->
+        <link href="resources/joblist.css" rel="stylesheet">
+    </head>
+    <style>
+        .filterDiv {
+        float: left;
+        background-color: #2196F3;
+        color: #ffffff;
+        width: 300px;
+        line-height: 200px;
+        text-align: center;
+        margin: 2px;
+        display: none;
+        }
+
+        .show {
+        display: block;
+        }
+
+        .container {
+        margin-top: 20px;
+        overflow: hidden;
+        }
+
+        /* Style the buttons */
+        .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        }
+
+        .btn:hover {
+        background-color: #ddd;
+        }
+
+        .btn.active {
+        background-color: #666;
+        color: white;
+        }
+    </style>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #1F2943;">
+          <a class="navbar-brand" href="login-homepage.html"><img src="images/website-logo.png" height="45"></a>        
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="login-answers.html">Your Answers <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login-jobs.html">Job Tracker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login-aboutus.html">About Us</a>
+              </li>           
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="homepage.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>         
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 style="color: #1F2943; font-weight: bold;">Welcome to Apply Myself!</h1>
+                  <p style="color: #1F2943;">We're here to help you showcase your best skills to top employers by creating ideal responses to application questions.</p>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <hr>
+
+    <div class="container">
+      <article class="card card-product-list">
+        <div class="row no-gutters">
+          <aside class="col-md-3">
+            <a href="#" class="img-wrap">
+              <!--span class="badge badge-danger"> NEW </span-->
+              <!--img src="images/items/3.jpg"-->
+            </a>
+          </aside>
+          <div class="col-md-6">
+            <div class="info-main">
+              <a href="#" class="h5 title"> Great product name goes here  </a>
+              <div class="rating-wrap mb-3">
+                <ul class="rating-stars">
+                  <li style="width:80%" class="stars-active"> 
+                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                    <i class="fa fa-star"></i> 
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                    <i class="fa fa-star"></i> 
+                  </li>
+                </ul>
+                <div class="label-rating">7/10</div>
+              </div> <!-- rating-wrap.// -->
+              
+              <p> Take it as demo specs, ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam </p>
+            </div> <!-- info-main.// -->
+          </div> <!-- col.// -->
+          <aside class="col-sm-3">
+            <div class="info-aside">
+              <div class="price-wrap">
+                <span class="price h5"> $140 </span>	
+                <del class="price-old"> $198</del>
+              </div> <!-- info-price-detail // -->
+              <p class="text-success">Free shipping</p>
+              <br>
+              <p>
+                <a href="#" class="btn btn-primary btn-block"> Details </a>
+                <a href="#" class="btn btn-light btn-block"><i class="fa fa-heart"></i> 
+                  <span class="text">Add to wishlist</span>
+                </a>
+              </p>
+            </div> <!-- info-aside.// -->
+          </aside> <!-- col.// -->
+        </div> <!-- row.// -->
+      </article> <!-- card-product .// -->
+    </div>
+
+    <div id="myBtnContainer" style="color: blue">
+        <button class="btn" onclick="filterSelection('a-c')">A - C</button>
+        <button class="btn" onclick="filterSelection('d-f')">D - F</button>
+        <button class="btn" onclick="filterSelection('g-i')">G - I</button>
+        <button class="btn" onclick="filterSelection('j-l')">J - L</button>
+        <button class="btn" onclick="filterSelection('m-o')">M - O</button>
+        <button class="btn" onclick="filterSelection('p-r')">P - R</button>
+        <button class="btn" onclick="filterSelection('s-u')">S - U</button>
+        <button class="btn" onclick="filterSelection('v-z')">V - Z</button>
+    </div>
+    <hr>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('banking')">Banking</button>
+        <button class="btn" onclick="filterSelection('beauty')">Beauty</button>
+        <button class="btn" onclick="filterSelection('beverage')">Beverage</button>
+        <button class="btn" onclick="filterSelection('cbank')"> Central Bank</button>
+        <button class="btn" onclick="filterSelection('charity')"> Charity</button>
+        <button class="btn" onclick="filterSelection('commercial')"> Commercial Property</button>
+
+        <button class="btn" onclick="filterSelection('consultancy')">Consultancy</button>
+        <button class="btn" onclick="filterSelection('consumer')">Consumer Goods</button>
+        <button class="btn" onclick="filterSelection('ecommerce')"> E-Commerce</button>
+        <button class="btn" onclick="filterSelection('fashion')"> Fashion</button>
+        <button class="btn" onclick="filterSelection('financial')"> Financial Services</button>
+
+        <button class="btn" onclick="filterSelection('food')">Food Production</button>
+        <button class="btn" onclick="filterSelection('fundmang')">Fund Management</button>
+        <button class="btn" onclick="filterSelection('gov')"> Government</button>
+        <button class="btn" onclick="filterSelection('health')"> Healthcare</button>
+        <button class="btn" onclick="filterSelection('humanres')"> Human Resources</button>
+
+        <button class="btn" onclick="filterSelection('legal')">Legal</button>
+        <button class="btn" onclick="filterSelection('logistics')">Logistics and Support</button>
+        <button class="btn" onclick="filterSelection('managementcons')"> Management Consultancy</button>
+        <button class="btn" onclick="filterSelection('news')"> News</button>
+        <button class="btn" onclick="filterSelection('ngo')"> NGO</button>
+        <button class="btn" onclick="filterSelection('nuclear')"> Nuclear Decomissioning</button>
+
+        <button class="btn" onclick="filterSelection('pharm')">Pharmaceuticals</button>
+        <button class="btn" onclick="filterSelection('professional')">Professional Services</button>
+        <button class="btn" onclick="filterSelection('rail')"> Rail Infrastructure</button>
+        <button class="btn" onclick="filterSelection('recruitmentcons')"> Recruitment Consultancy</button>
+        <button class="btn" onclick="filterSelection('retail')">Retail</button>
+        <button class="btn" onclick="filterSelection('semiconductor')">Semiconductors</button>
+        <button class="btn" onclick="filterSelection('security')">Security Service</button>
+
+        <button class="btn" onclick="filterSelection('socialmedia')"> Social Media</button>
+        <button class="btn" onclick="filterSelection('sports')">Sports</button>
+        <button class="btn" onclick="filterSelection('travelcons')">Travel Consultancy</button>
+        <button class="btn" onclick="filterSelection('tech')">Technology</button>
+        <button class="btn" onclick="filterSelection('university')">University</button>
+    
+    </div>
+
+    <div class="container">
+        <div class="filterDiv a-c legal">Accutrainee</div>
+        <div class="filterDiv a-c financial">Admiral</div>
+        <div class="filterDiv a-c beverage">AG Barr</div>
+        <div class="filterDiv a-c retail">Aldi</div>
+        <div class="filterDiv a-c legal">Allen & Overy</div>
+        <div class="filterDiv a-c tech">Apple</div>
+        <div class="filterDiv a-c legal">Ashurst</div>
+        <div class="filterDiv a-c legal">Baker McKenzie</div>
+        <div class="filterDiv a-c cbank">Bank of England</div>
+        <div class="filterDiv a-c financial">Barclays</div>
+        <div class="filterDiv a-c news">BBC</div>
+        <div class="filterDiv a-c professional">BDO</div>
+        <div class="filterDiv a-c financial">Bionic</div>
+        <div class="filterDiv a-c legal">Bird and Bird</div>
+        <div class="filterDiv a-c financial">Blackstone</div>
+        <div class="filterDiv a-c tech">Bloomberg</div>
+        <div class="filterDiv a-c retail">Boots</div>
+        <div class="filterDiv a-c legal">Bristows</div>
+        <div class="filterDiv a-c legal">Bryan Cave Leighton Paisner</div>
+        <div class="filterDiv a-c humanres">Buck</div>
+        <div class="filterDiv a-c legal">Burges Salmon LLP</div>
+        <div class="filterDiv a-c beverage">Chivas Brothers</div>
+        <div class="filterDiv a-c gov">Civil Service</div>
+        <div class="filterDiv a-c legal">Clifford Chance</div>
+        <div class="filterDiv a-c legal">CMS</div>
+        <div class="filterDiv a-c financial">Credit Suisse</div>
+
+        <div class="filterDiv d-f marketing">DDB</div>
+        <div class="filterDiv d-f professional">Deloitte</div>
+        <div class="filterDiv d-f legal">Dentons</div>
+        <div class="filterDiv d-f gov">Department of Education</div>
+        <div class="filterDiv d-f tech">Desk Pro</div>
+        <div class="filterDiv d-f consultancy">Devere</div>
+        <div class="filterDiv d-f legal">DLA Piper</div>
+        <div class="filterDiv d-f ecommerce">EBay</div>
+        <div class="filterDiv d-f professional">EY</div>
+        <div class="filterDiv d-f socialmedia">Facebook</div>
+        <div class="filterDiv d-f news">Financial Times</div>
+        <div class="filterDiv d-f tech">Finimize</div>
+        <div class="filterDiv d-f legal">Freshfields</div>
+
+        <div class="filterDiv g-i financial">Goldman Sachs</div>
+        <div class="filterDiv g-i tech">Google</div>
+        <div class="filterDiv g-i professional">Grant Thornton</div>
+        <div class="filterDiv g-i professional">Grayce</div>
+        <div class="filterDiv g-i pharm">GSK</div>
+        <div class="filterDiv g-i legal">Herbert Smith Freehills</div>
+        <div class="filterDiv g-i legal">Hogan Lovells</div>
+        <div class="filterDiv g-i gov">Homes Englands</div>
+        <div class="filterDiv g-i tech">Huawei</div>
+        <div class="filterDiv g-i tech">Into City Prep</div>
+        <div class="filterDiv g-i legal">Irwin Mitchell</div>
+        
+        <div class="filterDiv j-l financial">JP Morgan</div>
+        <div class="filterDiv j-l professional">KPMG</div>
+
+        <div class="filterDiv j-l retail">Lidl</div>
+        <div class="filterDiv j-l legal">Linklaters</div>
+        <div class="filterDiv j-l financial">Lloyds Banking</div>
+        <div class="filterDiv j-l fashion">Look Fabulous Forever</div>
+        <div class="filterDiv j-l beauty">L'Oreal</div>
+
+        <div class="filterDiv m-o professional consultancy">McKinsey and Company</div>
+        <div class="filterDiv m-o security">MI5</div>
+        <div class="filterDiv m-o tech">Microsoft</div>
+        <div class="filterDiv m-o legal">Milbank</div>
+        <div class="filterDiv m-o legal">Mishcon De Reya</div>
+        <div class="filterDiv m-o food">Mondelez</div>
+        <div class="filterDiv m-o legal">Morgan Stanley</div>
+        <div class="filterDiv m-o rail">National Rail</div>
+        <div class="filterDiv m-o financial">Natixis</div>
+        <div class="filterDiv m-o financial banking">Natwest</div>
+        <div class="filterDiv m-o consultancy managementcons">Newton</div>
+        <div class="filterDiv m-o health">NHS</div>
+        <div class="filterDiv m-o legal">Norton Rose Fullbright</div>
+        <div class="filterDiv m-o tech">Oppo</div>
+
+        <div class="filterDiv p-r financial tech">Paypal</div>
+        <div class="filterDiv p-r legal">Pinsent Masons</div>
+        <div class="filterDiv p-r professional">PwC</div>
+        
+        <div class="filterDiv s-u consultancy managementcons">Santander</div>
+        <div class="filterDiv s-u financial">SCGIB</div>
+        <div class="filterDiv s-u nuclear">Sellafield Ltd</div>
+        <div class="filterDiv s-u charity">Shelter</div>
+        <div class="filterDiv s-u legal">Shoosmiths</div>
+        <div class="filterDiv s-u legal">Simmons and Simmons</div>
+        <div class="filterDiv s-u legal">Skadden</div>
+        <div class="filterDiv s-u legal">Slaughter and May</div>
+
+        <div class="filterDiv s-u tech">Softwire</div>
+        <div class="filterDiv s-u fundmang">Somerset Capital Management Ltd</div>
+        <div class="filterDiv s-u legal">Squire Patton Boggs</div>
+        
+        <div class="filterDiv s-u semiconductor">Texas Instruments</div>
+        <div class="filterDiv s-u sports">The Mason Foundation</div>
+        <div class="filterDiv s-u tech health">TPP</div>
+        <div class="filterDiv s-u consultancy travelcons">Trailfinders</div>
+
+        <div class="filterDiv s-u banking financial">UBS</div>
+        <div class="filterDiv s-u ngo">UN World Food Programme</div>
+        <div class="filterDiv s-u consumer">Unilever</div>
+        <div class="filterDiv s-u university">University of Hertfordshire</div>
+
+        <div class="filterDiv v-z tech">Vodafone</div>
+        <div class="filterDiv v-z commercial">Workplace</div>
+        <div class="filterDiv v-z logistics">XPO</div>
+        <div class="filterDiv v-z consultancy recruitmentcons">Zetter</div>
+        <div class="filterDiv v-z professional">ZS</div>
+    </div>
+
+    <hr>
+    <!-- FOOTER -->
+    <footer class="container">
+      <p>Follow Us on Instagram</p>
+      <p>
+        <a href="https://www.instagram.com/applymyself_jobs/">
+          <div>
+            <i class="fa fa-instagram w3-hover-opacity" style="font-size: 50px; text-align: center;"></i>
+          </div>
+        </a>
+      </p>
+    
+      <p class="float-right"><a href="#">Back to top</a></p>     
+    </footer>
+
+
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+    }
+
+    function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+    }
+
+    function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+    }
+    element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+    }
+    </script>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/vendor/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

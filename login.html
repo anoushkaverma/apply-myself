@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="images/main-icon.png">
+        
+        <title>Login - Apply Myself</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="resources/login.css" rel="stylesheet">
+    </head>
+
+    <body class="text-center">
+
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #1F2943;">
+          <a class="navbar-brand" href="homepage.html"><img src="images/website-logo.png" height="45"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="answers.html">Your Answers <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="jobs.html">Job Tracker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About Us</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+        </nav>
+      </header>
+    
+        <form class="form-signin">
+            <h1 class="h3 mb-3 font-weight-bold">Login</h1>
+            <p>Log in to write 'Your Answers' and access 'Job Tracker' in <strong>Apply Myself</strong></p>
+            <hr>
+            <label for="inputEmail" class="sr-only">email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+            
+            <label for="inputPassword" class="sr-only">password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+            <p>Not a User? <a href="signup.html"><strong>Register Here</strong></a></p>
+            <p><a class="btn btn-lg btn-primary" onclick="callAPI(document.getElementById('inputEmail').value, document.getElementById('inputPassword').value)" href="login-homepage.html" role="button">Sign In</a></p>
+        </form>
+
+        <script>
+            // define the callAPI function that takes users' emails and passwords as parameters
+            var callAPI = (email, password) => {
+
+                // instantiate a headers object
+                var myHeaders = new Headers();
+
+                // add content type header to object
+                myHeaders.append("Content-Type", application/json);
+
+                // using built in JSON utility package turn object to string and store in a variable
+                var raw = JSON.stringify({"email":email,"password":password});
+
+                // create a JSON object with parameters for API call and store in a variable
+                var requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+                
+                // make API call with parameters and use promises to get response
+                fetch("URL LINK", requestOptions)
+                .then(response => response.text())
+                .then(result => alert(JSON.parse(result).body))
+                .catch(error => console.log('error', error));
+            }
+        </script>
+
+        <!-- Bootstrap: core JavaScript-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/vendor/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
